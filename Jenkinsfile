@@ -16,21 +16,21 @@ pipeline {
             steps {
                 script {
                     // Instalar Yarn si no está instalado
-                    sh 'npm install -g yarn'
+                    bat 'npm install -g yarn'
                 }
-                sh 'yarn install' // Instalar dependencias
+                bat 'yarn install' // Instalar dependencias
             }
         }
 
         stage('Build') {
             steps {
-                sh 'yarn build' // Construir la aplicación
+                bat 'yarn build' // Construir la aplicación
             }
         }
 
         stage('Deploy to Firebase') {
             steps {
-                sh 'firebase deploy --token $FIREBASE_TOKEN' // Desplegar a Firebase
+                bat 'firebase deploy --token $FIREBASE_TOKEN' // Desplegar a Firebase
             }
         }
     }
