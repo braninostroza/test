@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = 'C:\\ProgramData\\Jenkins\\.jenkins\\key\\deploy-2.json' // Ruta a tu archivo JSON
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('Deploy-React')
     }
 
     stages {
