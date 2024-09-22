@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        FIREBASE_TOKEN = credentials('firebase-token') // Asegúrate de tener este token en Jenkins
+        GOOGLE_APPLICATION_CREDENTIALS = 'C:\\ProgramData\\Jenkins\\.jenkins\\key\\deploy-2.json' // Ruta a tu archivo JSON
     }
 
     stages {
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Deploy to Firebase') {
             steps {
-                bat 'firebase deploy --token $FIREBASE_TOKEN' // Desplegar a Firebase
+                bat 'firebase deploy' // Desplegar a Firebase
             }
         }
     }
