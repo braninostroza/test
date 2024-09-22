@@ -24,7 +24,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'yarn build' // Construir la aplicación
+                bat 'npm run build' // Construir la aplicación
             }
         }
 
