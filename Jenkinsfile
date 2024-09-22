@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/braninostroza/test.git' // Reemplaza con tu repositorio
+                git url: 'https://github.com/braninostroza/test.git', branch: 'main' // Reemplaza con tu repositorio
             }
         }
 
