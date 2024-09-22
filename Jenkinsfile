@@ -3,6 +3,8 @@ pipeline {
 
     environment {
         FIREBASE_TOKEN = credentials('firebase-token') // Asegúrate de tener este token en Jenkins
+        GOOGLE_APPLICATION_CREDENTIALS = 'C:\ProgramData\Jenkins\.jenkins\key\deplot-2.json'
+        
     }
 
     stages {
