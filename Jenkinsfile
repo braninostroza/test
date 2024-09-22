@@ -14,13 +14,11 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                script {
-                    // Instalar Yarn si no está instalado
-                    bat 'npm install -g yarn'
-                }
-                bat 'yarn install' // Instalar dependencias
+                bat 'npm install -g yarn'
+                bat 'yarn --version' // Verificar que Yarn está instalado
+                bat 'yarn install'    // Instalar dependencias
             }
-        }
+        }       
 
         stage('Build') {
             steps {
